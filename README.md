@@ -1,5 +1,5 @@
-# phishAlert
-A phishing attack detection System
+# Title
+phishAlert - a browser extension which detect spam and phishing emails if it bypassed the spam filters
 
 # Problem
 
@@ -12,4 +12,10 @@ So we need to build a tool to detect phishing attack and alert the users in real
 # Idea
 
 
-# How it works?
+# Want to contribute? Here is a step by step process.
+- tag it that as "enhancement"
+- Fork the Project
+- Create your Feature Branch (git checkout -b feature/AmazingFeature)
+- Commit your Changes (git commit -m 'Add some AmazingFeature')
+- Push to the Branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
