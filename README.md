@@ -1,21 +1,83 @@
-# Title
-phishAlert - a browser extension which detect spam and phishing emails if it bypassed the spam filters
+# phishAlert - MVP Documentation
 
-# Problem
+## 1. Project Title
+**phishAlert** – A Browser Extension to Detect Phishing and Spam Emails
 
-Recently I received a professionial email from my x-employer, and pushing me to click on given link in the email. After checking it carefully I found that was phishing attack and surprisingly it wasn't marked as spam by gmail. So I'm not alone who was face this kind of attacks. It means email can harm individual by bypassing the spam filters.
+## 2. Objective
+To develop a browser-based extension that automatically analyzes email content in real-time and flags potential phishing and spam emails to protect users from cyber threats.
 
-# Solution
+## 3. Target Users
+- General Gmail users (initially)
+- Non-technical individuals vulnerable to phishing
+- Small businesses without dedicated cybersecurity tools
 
-So we need to build a tool to detect phishing attack and alert the users in real time.
+## 4. Core Problem Statement
+Phishing and spam emails are becoming increasingly sophisticated and frequent. Many users unknowingly fall victim due to a lack of awareness or proper detection tools. Current email platforms do not always detect every malicious email.
 
-# Idea
+## 5. Proposed Solution (MVP Scope)
+A Chrome browser extension that:
+- Scans the content of opened Gmail emails.
+- Detects phishing or spam content using AI or heuristic techniques.
+- Displays a visual warning if the email is suspicious.
+- Operates locally with minimal permissions.
 
+## 6. Key MVP Features
 
-# Want to contribute? Here is a step by step process.
-- tag it that as "enhancement"
-- Fork the Project
-- Create your Feature Branch (git checkout -b feature/AmazingFeature)
-- Commit your Changes (git commit -m 'Add some AmazingFeature')
-- Push to the Branch (git push origin feature/AmazingFeature)
-- Open a Pull Request
+| Feature | Description |
+|--------|-------------|
+| **Email DOM Extraction** | Extract subject, body, sender from opened Gmail emails. |
+| **Phishing/Spam Detection Engine** | Run AI-based or regex-based checks for known patterns (e.g., fake links, urgent language, spoofed addresses). |
+| **Real-Time Warning Display** | Show warning banner or icon if email is suspicious. |
+| **User Feedback Option** | Allow users to confirm or correct detection (optional for MVP). |
+| **Background Script** | Handles API communication and permission management. |
+
+## 7. Non-MVP (Future) Features
+- Integration with external APIs (e.g., VirusTotal, Google Safe Browsing)
+- Detailed phishing/spam explanation to user
+- Dashboard with statistics
+- Multi-email provider support (Outlook, Yahoo)
+- User training or reporting module
+
+## 8. Technology Stack
+
+| Layer | Tool/Framework |
+|-------|----------------|
+| **Frontend** | JavaScript, HTML/CSS, Chrome Extension APIs |
+| **AI/Detection** | OpenAI API / Custom ML Model (fallback to regex rules) |
+| **Backend (optional)** | Firebase/Supabase for feedback logging (optional) |
+| **Communication** | `chrome.runtime` for background-foreground messaging |
+
+## 9. User Flow (MVP)
+1. User opens Gmail.
+2. Extension detects email opened.
+3. Extension extracts email data.
+4. AI/regex engine processes the data.
+5. If threat is found, warning banner appears.
+6. User closes or ignores the warning.
+
+## 10. Success Criteria
+- Can detect basic phishing patterns with >70% accuracy.
+- Seamless integration into Gmail UI.
+- No lag or blocking behavior in Gmail.
+- Warning is visible and understandable by general users.
+
+## 11. Constraints and Assumptions
+- Gmail DOM structure may change—must be flexible.
+- Users will grant minimal permissions.
+- Limited usage of OpenAI or external APIs due to cost (can fall back to regex).
+
+## 12. Initial Development Timeline
+
+| Week | Milestone |
+|------|-----------|
+| 1 | Setup basic Chrome extension structure |
+| 2 | DOM scraping and Gmail email detection |
+| 3 | Implement AI-based or regex-based detection logic |
+| 4 | Display phishing warning UI |
+| 5 | Test across email scenarios |
+| 6 | Final bug fixing, packaging, and documentation |
+
+## 13. Open Questions
+- Should detection happen entirely client-side or also involve a backend?
+- What fallback detection to use if AI fails?
+- What metrics/logs should be collected for improvement?
