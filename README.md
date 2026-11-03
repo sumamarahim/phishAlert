@@ -1,4 +1,5 @@
 # phishAlert - MVP Documentation
+## Author: Sumama Rahim
 
 ## 1. Project Title
 **phishAlert** – A Browser Extension to Detect Phishing and Spam Emails
